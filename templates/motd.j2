@@ -1,6 +1,7 @@
-{{ motd_ascii_art }}
+{{ motd_ascii_art_header }}
 {% for item in motd_info %}
 {% for key, value in item.items() %}
 {{ key }}{{ value }}
 {% endfor %}
 {% endfor %}
+{{ motd_ascii_art_footer }}

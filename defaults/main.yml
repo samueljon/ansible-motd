@@ -1,6 +1,7 @@
 ---
 # defaults file for okh-motd
-motd_ascii_art: "{{lookup('file', './motd')}}"
+# Ascii art header
+motd_ascii_art_header: "{{lookup('file', './motdheader')}}"
 
 # Default information to show under the ASCII art
 motd_info:
@@ -11,5 +12,5 @@ motd_info:
   - " Virtual: ": "{{ 'YES' if ansible_virtualization_role == 'guest' else 'NO' }}\n"
   - " CPUs:    ": "{{ ansible_processor_vcpus }}"
   - " RAM:     ": "{{ (ansible_memtotal_mb / 1000) | round(1) }}GB"
-
+# Ascii art footer
 motd_ascii_art_footer: "{{lookup('file', './motdfooter')}}"
