@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include okh-motd"
+      include_role:
+        name: "okh-motd"
