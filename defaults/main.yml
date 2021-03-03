@@ -6,6 +6,7 @@ motd_ascii_art_header: "{{lookup('file', './motdheader')}}"
 # Default information to show under the ASCII art
 motd_info:
   - " FQDN:    ": "{{ ansible_fqdn }}"
+  - " Hostname ": "{{ ansible_hostname }}"
   - " IPv4:    ": "{{ ansible_all_ipv4_addresses}}"
   - " IPv6:    ": "{{ ansible_all_ipv6_addresses}}"    
   - " Distro:  ": "{{ ansible_distribution }} {{ ansible_distribution_version }} {{ ansible_distribution_release }}"
